@@ -1,0 +1,54 @@
+@media screen and (max-width: 1300px) {
+    .first {
+        flex-wrap: wrap;
+    }
+    .right-box img {
+        width:  305px;
+    }
+    .right-box video {
+        width: 305px;
+    }
+    .hero-section> :first-child{
+        font-size: 32px;
+    }
+    .hero-section> :nth-child(2){
+        font-size: 16px;
+    }
+    .hero-section> :nth-child(3){
+        font-size: 20px;
+    }
+    .hero-membership input, .action input {
+        width: 200px;
+        height: 50px;
+        padding-left: 15px;
+    }
+    .hero-membership button {
+        width: 150px;
+        height: 50px;
+        padding: 5px;
+    }
+    .action button {
+        width: 7.3rem;
+        height: 3.3rem;
+        /* padding: 5px; */
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
