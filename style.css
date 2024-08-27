@@ -1,113 +1,386 @@
-@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@400;900&family=Martian+Mono:wght@100..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
-* {
+*{
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
-    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-body {
+.container{
+    max-width: 75%;
+    margin-inline: auto;
+    overflow: hidden;
+}
+
+body{
     background-color: black;
+    font-family: 'Martel Sans', sans-serif;
 }
 
-.main {
+.main{
     background-image: url("./asstes/Images/bacground-Image.jpg");
-    background-position: center center;
+    height: 100vh;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: max(1200px,100vw);
-    height: 70vh;
+    /* background-size: max(1200px, 100vw); */
     position: relative;
 }
 
 .main .box {
-    height: 70vh;
+    height: 100vh;
     width: 100%;
     position: absolute;
     top: 0;
-    opacity: 0.69;
+    opacity: 0.6;
     background-color: black;
 }
 
-nav {
+nav{
+    height: 100px;
+    max-width: 75vw;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 60vw;
-    margin: auto;
-    height: 62px;
+    position: relative;
 }
 
+.languages{
+    max-height: 0;
+    overflow: hidden;
+}
+
+.languages-active{
+    display: block;
+    max-height: fit-content;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+}
+
+.language-option{
+    margin-top: 5px;
+    height: 20px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+}
 nav img {
-    color: red;
-    width: 114px;
+    width: 148px;
     position: relative;
-    z-index: 10;
+    z-index: 1;
+    cursor: pointer;
 }
 
 nav button {
     position: relative;
-    z-index: 10;
+    z-index: 1;
+    color: white;
 }
 
-.btn {
-    padding: 3px 8px;
+.btn-language{
+    height: 38px;
+    width: 100px;
+    font-size: 14px;
     font-weight: bold;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0); /* White with 30% opacity */
+    border: 1.5px solid rgba(255, 255, 255, 0.5); /* Semi-transparent border */
+    color: rgba(255, 255, 255, 1); /* Fully opaque text */
+    margin-right: 10px;
+    cursor: pointer;
 }
 
-.red-btn {
-    background-color: red;
-    color: white;
+.btn-language i {
+    margin-left: 1rem;
 }
 
-.red-btn-sm {
-    background-color: red;
-    color: white;
+.icon-active {
+    transform: rotate(180deg);
 }
 
+.btn-signin{
+    height: 38px;
+    width: 76px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #e50914;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+/* ================================================ */
+
+/* hero section */
 .hero-section {
-    font-family: "Martel Sans", sans-serif;
-    height: calc(100% -  62px);  /* 62 px are nave height */
+    height: calc(100% - 100px);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    position: relative;
+    gap: 25px;
     color: white;
-    gap: 13px;
-    padding: 0 30px;
+    transform: translateY(8%);
+    position: relative;
+    overflow: hidden;
 }
 
-.hero-section> :nth-child(1) {
-    font-family: "Poppins", sans-serif;
-    font-weight: bolder;
-    font-size: 48px;
+.hero-section> :first-child{
+    font-size: 2.6rem;
+    font-weight: 900;
     text-align: center;
 }
 
-.hero-section> :nth-child(2) {
+.hero-section> :nth-child(2){
+    font-size: 1.5rem;
     font-weight: 400;
-    font-size: 24px;
     text-align: center;
 }
 
-.hero-section> :nth-child(3) {
+.hero-section> :nth-child(3){
+    font-size: 1.3rem;
     font-weight: 400;
+    text-align: center;
+}
+
+.hero-membership{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 6px;
+}
+
+.hero-membership input{
+    width: 364px;
+    height: 3.5rem;
+    padding-left: 15px;
+    filter: opacity(80%);
+    background-color: rgba(33, 32, 32, 0.3); /* White with 30% opacity */
+    border: 1.5px solid rgba(255, 255, 255, 0.5); /* Semi-transparent border */
+    color: rgba(255, 255, 255, 1); /* Fully opaque text */
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+
+.hero-membership button {
+    width: 13.3rem;
+    height: 3.5rem;
+    background-color: #e50914;   
+    color: white;
+    text-align: center;
+    font-weight: 700;
     font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.hero-membership button i {
+    padding-left: 0.7rem;
+}
+
+.seprator-line{
+    height: 8px;
+    background-color: rgb(40, 39, 39);
+}
+
+/* =========================================== */
+/* first section */
+
+.first{
+    padding: 55px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    color: white;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+p {
+    margin-top: 15px;
+    font-size: 1.3rem;
+    font-weight: 400;
+    gap: 10px;
+}
+
+.right-box {
+    position: relative;
+}
+
+.right-box img {
+    width:  472px;
+    height: 358px;
+}
+
+.right-box video {
+    position: absolute;
+    z-index: -1;
+    top: 39px;
+    right: 62px;
+    width: 345px;
+    height: 270px;
+}
+
+/* ========================================== */
+
+/* FAQ section */
+.faq {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: white;
+    padding: 3.5rem 0;
+}
+
+.faq h2 {
+    margin-bottom: 0.6rem;
+    font-weight: 700;
+}
+
+.faqbox {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    width: 90%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background-color: #2d2d2d;
+    transition: 0.5s ease;
+}
+
+.question i {
+    font-size: 2rem;
+}
+
+.question:hover {
+    background-color: #595656;
+}
+
+.answer {
+    max-height: 0;
+    display: none;
+}
+
+.active{
+    display: block;
+    max-height: fit-content;
+    padding: 1.5rem;
+    background-color: #2d2d2d;
+}
+
+
+/* ================================== */
+/* Get-Started section */
+
+.get-started {
+    color: white;
+}
+.get-started p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.action {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.action input{
+    width: 73%;
+    height: 3.3rem;
+    padding-left: 15px;
+    filter: opacity(80%);
+    background-color: rgba(33, 32, 32, 0.3); /* White with 30% opacity */
+    border: 1.5px solid rgba(255, 255, 255, 0.5); /* Semi-transparent border */
+    color: rgba(255, 255, 255, 1); /* Fully opaque text */
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.action button {
+    width: 13.3rem;
+    height: 3.3rem;
+    background-color: #e50914;   
+    color: white;
     text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
 }
 
-.seprator-line {
-    height: 7px;
-    background-color: rgb(46, 44, 44);
+.action button i {
+    padding-left: 0.7rem;
 }
 
+/* ========================================= */
+/* Footer */
 
+footer{
+    padding: 30px 25px;
+    color: white;
+}
 
+a {
+    opacity: 70%;
+    color: white;
+}
 
+.links-wrapper{
+    margin-top: 2.5rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
 
+.links-box{
+    display: flex;
+    align-items: self-start;
+    flex-direction: column;
+    row-gap: 1rem;
+    font-size: 0.8rem;
+}
 
+.footer-btn-language{
+    margin: 3.3rem 0;
+    height: 35px;
+    width: 130px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0); /* White with 30% opacity */
+    border: 1.5px solid rgba(255, 255, 255, 0.5); /* Semi-transparent border */
+    color: rgba(255, 255, 255, 1); /* Fully opaque text */
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+h6{
+    opacity: 70%;
+    font-size: 0.8rem;
+}
 
 
 
